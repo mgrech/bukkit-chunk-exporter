@@ -1,0 +1,21 @@
+name: ChunkExporter
+main: dev.mgrech.bukkit.chunkexporter.Main
+version: 1.0-SNAPSHOT
+author: mgrech
+description: Export chunks to files
+commands:
+  export:
+    description: "Export chunks to raw, uncompressed files"
+    usage: |
+      /export <world> <firstX> <firstZ> <lastX> <lastZ> <order>
+      <world>: Name of the world to export from
+      <firstX>: X coordinate of first chunk to export (inclusive)
+      <firstZ>: Z coordinate of first chunk to export (inclusive)
+      <lastX>: X coordinate of last chunk to export (inclusive)
+      <lastZ>: Z coordinate of last chunk to export (inclusive)
+      <order>: Coordinate order, valid options: xyz, xzy, yxz, yzx, zxy, zyx
+    permission: chunkexporter.export
+permissions:
+  chunkexporter.export:
+    description: Export chunks to files using the /export command
+    default: op
